@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Chip8 roms
+roms/*
+
+# Other
+.DS_Store
