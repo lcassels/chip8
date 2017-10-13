@@ -350,7 +350,7 @@ bool Chip8::emulateCycle(){
         // FX29: Sets I to the location of the sprite for the character in VX.
         // Characters 0-F (in hexadecimal) are represented by a 4x5 font
         case 0xF029:
-          I = ((opcode & 0x0F00) >> 8) * 5;
+          I = V[((opcode & 0x0F00) >> 8)] * 5;
           pc += 2;
           break;
 
@@ -731,7 +731,8 @@ void Chip8::selfTest(){
   // FX29: Sets I to the location of the sprite for the character in VX.
   // Characters 0-F (in hexadecimal) are represented by a 4x5 font
   initialize();
-  runOpcode(0xF829);
+  V[7] = 8;
+  runOpcode(0xF729);
   assert(I == 40);
 
   // FX33: Stores the Binary-coded decimal representation of VX
