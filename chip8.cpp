@@ -4,7 +4,7 @@
 #include <cassert>      // assert
 #include <fstream>
 #include <iostream>     // cout
-#include <SDL.h>        // SDL2
+#include <SDL2/SDL.h>   // SDL2
 #include <stdio.h>      // printf, NULL
 #include <stdlib.h>     // srand, rand
 #include <string>
@@ -399,6 +399,7 @@ bool Chip8::emulateCycle(){
   if(sound_timer > 0){
     if(sound_timer == 1)
       printf("BEEP!\n");
+      // TODO: make this play sound (why is it so hard to play sound in SDL...)
     --sound_timer;
   }
 
@@ -673,7 +674,8 @@ void Chip8::selfTest(){
   runOpcode(0xC300 | 0b10101010);
   assert((V[3] & 0b01010101) == 0);
 
-  // DXYN: idk how to test this
+  // DXYN:
+  // TODO: implement unit tests for this opcode
 
   // EX9E: Skips the next instruction if the key stored in VX is pressed
   initialize();

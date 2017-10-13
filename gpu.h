@@ -1,7 +1,7 @@
 #ifndef GPU_H
 #define GPU_H
 
-#include <SDL.h>      // SDL2
+#include <SDL2/SDL.h>      // SDL2
 
 class Gpu
 {

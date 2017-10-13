@@ -1,5 +1,5 @@
 #include "gpu.h"
-#include <SDL.h>        // SDL2
+#include <SDL2/SDL.h>        // SDL2
 #include <stdlib.h>     // srand, rand
 
 bool Gpu::initialize(){

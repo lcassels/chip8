@@ -1,6 +1,6 @@
 #include "chip8.h"
 #include <cstdlib>        // exit
-#include <SDL.h>          // SDL2
+#include <SDL2/SDL.h>     // SDL2
  
 int main(int argc, char **argv)
 {
