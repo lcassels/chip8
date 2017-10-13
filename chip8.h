@@ -2,7 +2,7 @@
 #define CPU_H
 
 #include "gpu.h"
-#include <SDL.h>      // SDL2
+#include <SDL2/SDL.h>      // SDL2
 #include <string>
 using namespace std;
 
