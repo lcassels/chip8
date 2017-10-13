@@ -62,6 +62,8 @@ int main(int argc, char **argv)
     chip8.setKeys();
 
     // cap operations per second
+    //    SDL_Delay only delays by integer milliseconds, so this won't be too
+    //    precise, but it will at least rate-limit it somewhat
     frameTime = SDL_GetTicks() - tStart;
     if (frameTime < 1000/hz) {
       SDL_Delay((1000/hz) - frameTime);

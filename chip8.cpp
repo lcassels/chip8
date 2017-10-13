@@ -735,7 +735,13 @@ void Chip8::selfTest(){
   assert(I == 40);
 
   // FX33: Stores the Binary-coded decimal representation of VX
-  // no idea how to test this
+  initialize();
+  I = 0x300;
+  V[5] = 209;
+  runOpcode(0xF533);
+  assert(memory[I] == 2);
+  assert(memory[I + 1] == 0);
+  assert(memory[I + 2] == 9);
 
   // FX55: Stores V0 to VX (including VX) in memory starting at address I
   initialize();
