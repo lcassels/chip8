@@ -28,7 +28,7 @@ private:
   // 64 x 32 black and white display
   unsigned char gfx[64 * 32];
 
-  // interrupts, count at 60 Hz - when set above zero, count to zero
+  // interrupts - when set above zero, count to zero
   unsigned char delay_timer;
   unsigned char sound_timer;
 
