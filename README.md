@@ -19,7 +19,7 @@ It has only been tested on OS X, but it should also compile and run perfectly on
 ## FAQ
 
 **How do I use it?**  
-Run `make` to build, then run `./main.o path/to/chip8_rom` to run a chip8 executable!
+Run `make` to build, then run `./main.out path/to/chip8_rom` to run a chip8 executable!
 
 
 **What do you even run on chip8? Isn't that from the 70s?**  
